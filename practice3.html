@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>Practice 3</title>
+</head>
+<body>
+    <label for="pass1">Type the first password</label>
+    <input type="text" id="pass1"><br>
+    <label for="pass2">Type the second password</label>
+    <input type="text" id="pass2"><br>
+    <button id="check">Check Password</button>
+    <script>
+        const button = document.getElementById("check");
+        button.addEventListener("click", function(){
+            const pass1 = document.getElementById("pass1").value;
+            const pass2 = document.getElementById("pass2").value;
+
+            if (pass1.length < 8){
+                alert("Password 1 is less than 8 characters long.");
+            }
+            else if (pass2.length < 8){
+                alert("Password 2 is less than 8 characters long.");
+            }
+            else if (pass1 !== pass2){
+                alert("Passwords do not match.");
+            }
+            else{
+                alert("Passwords match.");
+            }
+        })
+        
+    </script>
+</body>
+</html>
