@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice 4</title>
+</head>
+<body>
+    <form method="post">
+        Enter a number:
+        <input type="number" name="n" min="1" required>
+        <input type="submit" value="generate">
+    </form><br>
+    <?php
+
+if ($_POST) {
+
+    $n = $_POST["num"];
+
+    echo "<table border='1'>";
+
+    echo "<tr>";
+    echo "<td>*</td>";
+
+    for ($i = 1; $i <= $n; $i++) {
+        echo "<td>$i</td>";
+    }
+
+    echo "</tr>";
+
+    for ($i = 1; $i <= $n; $i++) {
+
+        echo "<tr>";
+        echo "<td>$i</td>";
+
+        for ($j = 1; $j <= $n; $j++) {
+            $m = $i * $j;
+            echo "<td>$m</td>";
+        }
+
+        echo "</tr>";
+    }
+
+    echo "</table>";
+}
+
+?>
+</body>
+</html>
