@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+    <style>
+        body{
+            font-family:'Courier New', Courier, monospace
+        }
+        p{
+            color: black;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <p id="dummy">This is dummy text</p><br>
+    <label for="colorInput">Type a color to change text color:</label>
+    <input type="text" id="colorInput"><br>
+    <label for="borderInput">Type a color to change border color:</label>
+    <input type="text" id="borderInput"><br>
+    <label for="widthInput">Type a number to change border width:</label>
+    <input type="number" id="widthInput">
+
+    <script>
+        const dummy = document.getElementById('dummy');
+        const colorinput = document.getElementById('colorInput')
+        const borderinput = document.getElementById('borderInput')
+        const widthinput = document.getElementById('widthInput')
+
+        colorinput.addEventListener('input', function() {
+            dummy.style.color = this.value;
+        });
+        borderinput.addEventListener('input', function() {
+            dummy.style.borderColor = this.value;
+        });
+        widthinput.addEventListener('input', function() {
+            dummy.style.borderWidth = this.value + "px";
+        });
+    </script>
+</body>
+
+</html>
